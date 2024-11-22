@@ -16,7 +16,7 @@ pipeline{
             steps{
                 sshagent(['dokku']){
                     sh 'git remote remove dokku || true'
-                    sh 'git remote add dokku dokku@172.23.239.206:saamfi-h2 || true'
+                    sh 'git remote add dokku dokku@172.23.224.1:saamfi-h2 || true'
                     sh ' GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git push dokku main -f'
                 }
             }
